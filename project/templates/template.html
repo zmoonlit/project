@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Gaming Merchandise|Virtual Items Trading </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename="css/style.css")}}" rel="stylesheet" type="text/css" media="screen"/>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="{{url_for('static', filename="images/gun_icon.png")}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+	﻿.bg { 
+	    background:lightgray;
+	    border: 3px solid black;
+	    padding: 2px;
+	}
+	.cg {
+	    background:ButtonFace;
+	    border: 3px solid black;
+	    padding: 1px;
+	}
+	#sidebar{
+	    background-image:url({{ url_for('static', filename="images/headerlg.jpg")}});
+	    position: sticky;
+	    border-style: solid;
+	    width: 200px;
+	    float: right;
+	    margin-right:50px;
+	}
+
+	ul{
+	     list-style-type: none;
+	     font-style: oblique; 
+	     font-size: 16px;
+	}
+	table, th, td {
+	    border: 1px solid black;
+	    border-collapse: collapse;
+	    
+	}
+	th, td {
+	    padding: 5px;
+	    font-size:large;
+	}
+	body {
+	     background-image:url({{url_for('static', filename="images/bg.jpg")}});
+	}
+	d {
+	    font-size:medium;
+	    color:teal;
+	}
+	p {
+	    font-size:large;
+	}
+    </style>
+
+</head>
+<body style="background-image:url({{url_for('static', filename="images/bg.jpg")}});">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:8000/main"> <strong>Gaming Merchandise </strong> </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:8000/main">Home</a></li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Items
+                 <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="http://localhost:8000/popular_items">Popular Items</a></li>
+                   <li><a href="http://localhost:8000/popular_keys">Popular Keys</a></li>
+                 </ul>
+               </li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop
+                 <span class="caret"></span></a>
+			     <ul class="dropdown-menu">
+			       <li><a href="http://localhost:8000/shop">All Guns and Knives</a></li>
+                   <li><a href="http://localhost:8000/all_keys">All Keys</a></li>
+                   <li><a href="http://localhost:8000/misc_items">Miscellaneous</a></li>
+                 </ul>
+               </li>
+               <li><a href="http://localhost:8000/contact"> Order / Contact</a></li>
+               <li><a href="http://localhost:8000/try_your_luck">Lucky Draw</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+	{% if username %}
+      <li><a href="http://localhost:8000/signup"><span class="glyphicon glyphicon-user"></span> Dashboard</a></li>
+      <li><a href="http://localhost:8000/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+	{% else %}
+       <li><a href="http://localhost:8000/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="http://localhost:8000/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	{% endif %}
+    </ul>
+  </div>
+</nav>
+
+  
+<div class="container bg">  
+<div id="content">
+                <h1> Introduction </h1>
+				<d> We are a group of virtual items traders that aim to set up a convenient online shop. We sell different virtual items for this game: Counter Strike:Global Offensive. We hope to include more different types of games in the future.
+				If you are interested in any of the items from the shop. Feel free to browse the Contact page and contact with us. We also buy-in rare in-game items from players. Feel free to raise a deal. </d>
+			</div><!--end content-->
+            </div> 
+ <div id="sidebar" style="background-image:url({{url_for('static', filename="images/headerlg.jpg")}});">
+                <div id="newestKey">
+                    <h3 class="text-center"> Newest Keys </h3>
+                    <ul>
+                        <li><a href="http://localhost:8000/popular_keys"><strong>Gloves Key</strong></a></li>
+                    </ul>
+                </div>
+                <div id="popular">
+                    <h3 class="text-center"> Popular Items </h3>
+                    <ol>
+                        <li><a href="http://localhost:8000/popular_items"><strong>M4A4 - Neo Noir</strong></a></li>
+                        <li><a href="http://localhost:8000/popular_items"><strong>Bayonet - Freehand</strong></a></li>
+                    </ol>
+                </div>
+             </div> <!--end sidebar-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿.bg { 
+    background:lightgray;
+    border: 3px solid black;
+    padding: 2px;
+}
+.cg {
+	background:ButtonFace;
+    border: 3px solid black;
+    padding: 1px;
+}
+#sidebar{
+	background-image:url({{ url_for('static', filename="images/headerlg.jpg")}});
+    position: sticky;
+    border-style: solid;
+    width: 200px;
+    float: right;
+    margin-right:50px;
+}
+
+ul{
+     list-style-type: none;
+     font-style: oblique; 
+     font-size: 16px;
+}
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+    
+}
+th, td {
+	padding: 5px;
+    font-size:large;
+}
+body {
+     background-image:url({{url_for('static', filename="images/bg.jpg")}});
+}
+d {
+    font-size:medium;
+    color:teal;
+}
+p {
+	font-size:large;
+}

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Gaming Merchandise|Virtual Items Trading </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename="css/style.css")}}" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="gun_icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  .auto-style1 {
+	  color: #FF0000;
+  }
+  .auto-style2 {
+	  color: #0000FF;
+  }
+  .auto-style3 {
+	  color: #2E6DA4;
+  }	
+      ul{
+	     list-style-type: none;
+	     font-style: oblique; 
+	     font-size: 16px;
+	}
+   </style>
+  </style>
+</head>
+<body style="background-image:url({{url_for('static', filename="images/bg.jpg")}});">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:8000/main"> <strong>Gaming Merchandise </strong> </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:8000/main">Home</a></li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Items
+                 <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="http://localhost:8000/popular_items">Popular Items</a></li>
+                   <li><a href="http://localhost:8000/popular_keys">Popular Keys</a></li>
+                 </ul>
+               </li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop
+                 <span class="caret"></span></a>
+			     <ul class="dropdown-menu">
+			       <li><a href="http://localhost:8000/shop">All Guns and Knives</a></li>
+                   <li><a href="http://localhost:8000/all_keys">All Keys</a></li>
+                   <li><a href="http://localhost:8000/misc_items">Miscellaneous</a></li>
+                 </ul>
+               </li>
+               <li><a href="http://localhost:8000/contact"> Order / Contact</a></li>
+               <li><a href="http://localhost:8000/try_your_luck">Lucky Draw</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost:8000/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="http://localhost:8000/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container cg">
+<h3><strong> Contacts </strong></h3>
+<p> If you are interested in purchasing any of the item or simply having 
+enquiries, contact Gaming Merchandise through any of the following.
+<table style="width: 50%">
+	<tr>
+		<td class="auto-style1">Steam</td>
+		<td class="auto-style1">GameMerchant06</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Facebook</td>
+		<td class="auto-style2">GamingMerchandise</td>
+	</tr>
+	<tr>
+		<td class="auto-style3">Email</td>
+		<td class="auto-style3">gamingmerchandise06@hotmail.com</td>
+	</tr>
+</table>
+</p>
+</div>
+</html>

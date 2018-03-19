@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Gaming Merchandise|Virtual Items Trading </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename="css/style.css")}}" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="gun_icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>	
+      ul{
+	     list-style-type: none;
+	     font-style: oblique; 
+	     font-size: 16px;
+	}
+    </style>
+
+</head>
+<body style="background-image:url({{url_for('static', filename="images/bg.jpg")}});">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:8000/main"> <strong>Gaming Merchandise </strong> </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:8000/main">Home</a></li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Items
+                 <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="http://localhost:8000/popular_items">Popular Items</a></li>
+                   <li><a href="http://localhost:8000/popular_keys">Popular Keys</a></li>
+                 </ul>
+               </li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop
+                 <span class="caret"></span></a>
+			     <ul class="dropdown-menu">
+			       <li><a href="http://localhost:8000/shop">All Guns and Knives</a></li>
+                   <li><a href="http://localhost:8000/all_keys">All Keys</a></li>
+                   <li><a href="http://localhost:8000/misc_items">Miscellaneous</a></li>
+                 </ul>
+               </li>
+               <li><a href="http://localhost:8000/contact"> Order / Contact</a></li>
+               <li><a href="http://localhost:8000/try_your_luck">Lucky Draw</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost:8000/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="http://localhost:8000/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container content">
+
+<button id="hide">Hide All Items with "Normal" Rarity</button>
+<button id="show">Show All Items with "Normal" Rarity</button>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".panel-default").hide();
+    });
+    $("#show").click(function(){
+        $(".panel-default").show();
+    });
+});
+</script>
+
+ <div class="row">
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> Five Seven | Flame Test </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_57flametest.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$5</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> P2000 | Urban Hazard </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_p2000urbanhazard.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$5</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> R8 | Tread Light </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_r8treadlight.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$10</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> Glock 18 | Moon Rise </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_glockmoonrise.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$10</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> MAG 7 | SWAG </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_mag7swag.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$18</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-default">
+      <div class="panel-heading"> MP9 | Black Sand </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/nl_mp9blacksand.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$20</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-primary">
+      <div class="panel-heading"> MP7 | Bloodsport </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/g_mp7bloodsport.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$38</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-primary">
+      <div class="panel-heading"> Nova | Wild Six </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/g_novawildsix.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$50</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-primary">
+      <div class="panel-heading"> UMP45 | Artic Wolf </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/g_ump45articwolf.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$68</div>
+    </div> 
+   </div>
+   <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-warning">
+      <div class="panel-heading"> AWP | Mortis </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/r_awpmortis.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$180</div>
+    </div> 
+   </div>
+  <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-warning">
+      <div class="panel-heading"> M4A4 | Neo Noir </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/r_m4a4noir.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$300</div>
+    </div> 
+   </div>
+  <div class="col-lg-4 col-md-6 col-widen text-center">
+    <div class="panel panel-danger">
+      <div class="panel-heading"> Bayonet | Freehand </div>
+      <div class="panel-body"></div>
+      <img src="{{url_for('static', filename="images/mr_bayofreehand.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$660</div>
+    </div> 
+  </div>
+
+</div>
+</div> 
+</body>
+
+
+</html>

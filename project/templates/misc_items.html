@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Gaming Merchandise|Virtual Items Trading </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename="css/style.css")}}" rel="stylesheet" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" href="gun_icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>	
+      ul{
+	     list-style-type: none;
+	     font-style: oblique; 
+	     font-size: 16px;
+	}
+    </style>
+
+</head>
+<body style="background-image:url({{url_for('static', filename="images/bg.jpg")}});">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://localhost:8000/main"> <strong>Gaming Merchandise </strong> </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://localhost:8000/main">Home</a></li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">New Items
+                 <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="http://localhost:8000/popular_items">Popular Items</a></li>
+                   <li><a href="http://localhost:8000/popular_keys">Popular Keys</a></li>
+                 </ul>
+               </li>
+      <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Shop
+                 <span class="caret"></span></a>
+			     <ul class="dropdown-menu">
+			       <li><a href="http://localhost:8000/shop">All Guns and Knives</a></li>
+                   <li><a href="http://localhost:8000/all_keys">All Keys</a></li>
+                   <li><a href="http://localhost:8000/misc_items">Miscellaneous</a></li>
+                 </ul>
+               </li>
+               <li><a href="http://localhost:8000/contact"> Order / Contact</a></li>
+               <li><a href="http://localhost:8000/try_your_luck">Lucky Draw</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://localhost:8000/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="http://localhost:8000/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container content">
+ <div class="row">
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-info">
+      <div class="panel-heading"> Capsule | Sticker </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_capsule.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$10</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-info">
+      <div class="panel-heading"> Opeartion Pass </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_operationpass.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$40</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-info">
+      <div class="panel-heading"> Swap Tool </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_swaptool.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$105</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-info">
+      <div class="panel-heading"> Name Tag | Permanent </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_nametag.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$200</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-danger">
+      <div class="panel-heading"> Competition Gift | 2015 </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_gift2015.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$228</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-danger">
+      <div class="panel-heading"> Competition Gift | 2016 </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_gift2016.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$228</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-danger">
+      <div class="panel-heading"> Competition Gift | 2017 </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_gift2017.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$228</div>
+    </div> 
+   </div>
+   <div class="col-lg-3 col-md-5 col-widen text-center">
+    <div class="panel panel-danger">
+      <div class="panel-heading"> Competition Gift | 2018 </div>
+      <div class="panel-body"></div>
+		<img src="{{url_for('static', filename="images/other_gift2018.png")}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="panel-footer">$228</div>
+    </div> 
+   </div>
+
+</div>
+</div> 
+</body>
+
+
+</html>
